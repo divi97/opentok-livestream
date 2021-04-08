@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-function ConnectionStatus() {
-    return (
-        <div>
-            
-        </div>
-    )
+function ConnectionStatus({ connected }) {
+  let status = connected ? "Connected" : "Disconnected";
+  return (
+    <div className="connectionStatus">
+      <strong>Status:</strong> {status}
+    </div>
+  );
 }
 
-export default ConnectionStatus
+export default ConnectionStatus;

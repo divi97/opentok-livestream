@@ -3,15 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import config from "./config";
+import { PublisherConfig, SubcriberConfig } from "./config";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-      apiKey={config.API_KEY}
-      sessionId={config.SESSION_ID}
-      token={config.TOKEN}
-    />
+    <App PublisherConfig={PublisherConfig} SubcriberConfig={SubcriberConfig} />
   </React.StrictMode>,
   document.getElementById("root")
 );
